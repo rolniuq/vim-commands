@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"vim-syntax/cursor"
 	"vim-syntax/global"
+	"vim-syntax/insert"
 )
 
 type CommandsForLife interface {
@@ -23,6 +24,8 @@ func main() {
 		c = global.NewGlobal()
 	case cursor.CursorName:
 		c = cursor.NewCursor()
+	case insert.InsertName:
+		c = insert.NewInsert()
 	default:
 		fmt.Println("Unknown command")
 	}
