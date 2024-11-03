@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"vim-syntax/cursor"
 	"vim-syntax/global"
+	"vim-syntax/help"
 	"vim-syntax/insert"
 )
 
@@ -27,7 +28,7 @@ func main() {
 	case insert.InsertName:
 		c = insert.NewInsert()
 	default:
-		fmt.Println("Unknown command")
+		c = help.NewHelp()
 	}
 
 	commands := c.GetCommands()
