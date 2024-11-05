@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"vim-syntax/cursor"
+	"vim-syntax/edit"
 	"vim-syntax/global"
 	"vim-syntax/help"
 	"vim-syntax/insert"
@@ -27,6 +28,8 @@ func main() {
 		c = cursor.NewCursor()
 	case insert.InsertName:
 		c = insert.NewInsert()
+	case edit.EditName:
+		c = edit.NewEdit()
 	default:
 		c = help.NewHelp()
 	}
