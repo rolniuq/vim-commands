@@ -9,6 +9,7 @@ import (
 	"vim-syntax/help"
 	"vim-syntax/insert"
 	maketext "vim-syntax/make_text"
+	"vim-syntax/register"
 	viusalcmd "vim-syntax/viusal_cmd"
 )
 
@@ -36,6 +37,8 @@ func main() {
 		c = maketext.NewMakeText()
 	case viusalcmd.VisualCmdName:
 		c = viusalcmd.NewVisualCmd()
+	case register.RegisterName:
+		c = register.NewRegister()
 	default:
 		c = help.NewHelp()
 	}
