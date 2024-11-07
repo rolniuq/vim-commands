@@ -8,6 +8,8 @@ import (
 	"vim-syntax/global"
 	"vim-syntax/help"
 	"vim-syntax/insert"
+	maketext "vim-syntax/make_text"
+	viusalcmd "vim-syntax/viusal_cmd"
 )
 
 type CommandsForLife interface {
@@ -30,6 +32,10 @@ func main() {
 		c = insert.NewInsert()
 	case edit.EditName:
 		c = edit.NewEdit()
+	case maketext.MakeTextName:
+		c = maketext.NewMakeText()
+	case viusalcmd.VisualCmdName:
+		c = viusalcmd.NewVisualCmd()
 	default:
 		c = help.NewHelp()
 	}

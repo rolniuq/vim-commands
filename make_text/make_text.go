@@ -1,7 +1,7 @@
 package maketext
 
 const (
-	MakeTextName = "maketext"
+	MakeTextName = "make_text"
 )
 
 type MakeText struct{}
